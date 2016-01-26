@@ -70,7 +70,7 @@ var pics = [
 function setImage(index) {
     var item = pics[index];
     document.getElementById("svg-image").setAttribute("xlink:href", "/img/" + item.img);
-    var applyElements = document.querySelectorAll(".apply-span");
+    var applyElements = document.querySelectorAll(".top-bar .page-link");
     for (var i = 0; i < applyElements.length; i++) {
         applyElements[i].style.color = item.color;
     };
