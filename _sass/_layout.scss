@@ -9,30 +9,6 @@
     position: relative;
 }
 
-.section-heading {
-    font-family: unhackathon-font;
-    text-align: center;
-    font-weight: normal;
-}
-
-h1.section-heading {
-    font-size: 20px;
-    @media #{$large-screen} {
-        font-size: 34px;
-    }
-}
-
-h2.section-heading {
-    font-size: 16px;
-    @media #{$large-screen} {
-        font-size: 24px;
-    }    
-}
-
-h3.section-heading {
-    font-size: 18px;
-}
-
 section {
     margin:0;
     @media #{$large-screen} {
@@ -63,14 +39,29 @@ section {
 .content {
     > h1 {
         font-family: unhackathon-font;
-        font-size: 34px;
         text-align: center;
+        font-size: 20px;
+        @media #{$large-screen} {
+            font-size: 34px;
+        }
+    }
+
+    > h2 {
+        font-family: unhackathon-font;
+        text-align: center;
+        font-size: 16px;
+        @media #{$large-screen} {
+            font-size: 24px;
+        }
     }
 
     > h3 {
         font-family: unhackathon-font;
-        font-size: 18px;
+        font-size: 16px;
         text-align: center;
+        @media #{$large-screen} {
+            font-size: 18px;
+        }
     }
 }
 
