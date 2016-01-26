@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-  <!--<a class="typeform-share button" href="https://unhackathon.typeform.com/to/L0hqtf" data-mode="2" target="_blank">Launch me!</a>-->
 # Code of Conduct
 Unhackathon and its organizers are committed to providing a welcoming and harassment-free environment for participants of all races, gender identities, sexual orientations, physical abilities, physical appearances, and beliefs.
   
 We’ve written this code of conduct not because we expect bad behavior from our community – which, based on our applications, is always overwhelmingly kind and civil – but because we believe a clear code of conduct is a necessary part of building a respectful community space.
   
 Unhackathon participants agree to:
+
 1. Be considerate in speech and actions, and actively seek to acknowledge and respect the boundaries of fellow attendees.  
 2. Refrain from demeaning, discriminatory, or harassing behavior and speech. Harassment includes, but is not limited to: deliberate intimidation; stalking; unwanted photography or recording; sustained or willful disruption of talks or other events; inappropriate physical contact; use of sexual or discriminatory imagery, comments, or jokes; and unwelcome sexual attention. If you feel that someone has harassed you or otherwise treated you inappropriately, please alert any member of the Unhackathon team in person, via the team phone/text line, or via email. As this is a hackathon we like to explicitly note that the hacks created at our hackathon are equally subjective to the anti-harassment policy. Hacks should not involve sexualised images, activities, or other offensive material.  
 3. Respect the venue. We are very lucky to have this space at the Centre for Social Innovation. Please be considerate of security. Note that those not participating in Unhackathon are not allowed in the CSI space. 
