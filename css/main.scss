@@ -56,5 +56,8 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting",
         "springboard",
-        "syntax"
+        "syntax",
+        "foundation"
 ;
+
+@include foundation-everything($flex: true);
