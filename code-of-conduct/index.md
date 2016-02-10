@@ -10,18 +10,19 @@ Unhackathon participants agree to:
 
 1. Be considerate in speech and actions, and actively seek to acknowledge and respect the boundaries of fellow attendees.  
 2. Refrain from demeaning, discriminatory, or harassing behavior and speech. Harassment includes, but is not limited to: deliberate intimidation; stalking; unwanted photography or recording; sustained or willful disruption of talks or other events; inappropriate physical contact; use of sexual or discriminatory imagery, comments, or jokes; and unwelcome sexual attention. If you feel that someone has harassed you or otherwise treated you inappropriately, please alert any member of the Unhackathon team in person, via the team phone/text line, or via email. As this is a hackathon we like to explicitly note that the hacks created at our hackathon are equally subjective to the anti-harassment policy. Hacks should not involve sexualised images, activities, or other offensive material.  
-3. Respect the venue. We are very lucky to have this space at the Centre for Social Innovation. Please be considerate of security. Note that those not participating in Unhackathon are not allowed in the CSI space. 
+3. Respect the venue. Please be considerate of security. Note that those not participating in Unhackathon are not allowed in the space. 
 4. Take care of each other. Alert a member of the Unhackathon team if you notice a dangerous situation, someone in distress, or violations of this code of conduct, even if they seem small.
 
 
-We are also adopting social rules based on the Recurse Center’s User Manual. These are guidelines for making expected behavior more well-defined. Few people set out to be jerks or annoy others, so these social rules help us all to avoid behaviors harmful to a supportive, productive, and fun learning environment. 
+We have also adopted social rules based on the Recurse Center’s User Manual. These are guidelines for making expected behavior more well-defined. Few people set out to be jerks or annoy others, so these social rules help us all to avoid behaviors harmful to a supportive, productive, and fun learning environment. 
 
 1. No feigning surprise - Acting surprised when people don’t know something often makes them feel bad and has zero educational benefit.
 2. No well-actually's - A well-actually is when someone explains something in a mostly-correct manner and another person interjects with a minor/irrelevant correction that derails the discussion without helping or clarifying significantly. 
 3. No back-seat driving - Lobbing advice across tables or intermittently injecting yourself into conversations is a distracting interruption. We encourage helping each other out - pair programming is one of the best ways to work and learn - but that means only giving advice when it is wanted, and engaging in active discussions rather than passive tips. 
 4. No subtle -isms - Racism, sexism, homophobia, transphobia, and other kinds of bias are harmful, even if subtle or unintended. Subtle -isms are small things that make others feel uncomfortable, things that we all sometimes do by mistake. For example, saying "It's so easy my grandmother could do it" is a subtle -ism and should be avoided.
 5. When someone violates these social rules, feel free to point it out to that person. You may also ask an Unhackathon organizer to say something if you’re uncomfortable talking to that person yourself. If you are the one responsible for breaking a social rule, apologize and move on.
-   
+
+
 How to Reach Us: Members of the Unhackathon team will be available via voice or text. You can find those numbers at http://unhackathon.org/codeofconduct.
   
 If any attendee engages in harassing behavior, the hackathon organizers may take any lawful action we deem appropriate, including but not limited to warning the offender or asking the offender to leave the hackathon. (If you feel you have been unfairly accused of violating this code of conduct, you should contact the Unhackathon team with a concise description of your grievance; any grievances filed will be considered by the entire Unhackathon team.)
