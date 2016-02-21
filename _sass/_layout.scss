@@ -43,6 +43,15 @@ section {
             font-size: 18px;
         }
     }
+
+    > h4 {
+        font-family: unhackathon-font;
+        font-size: 12px;
+        text-align: center;
+        @media #{$large-screen} {
+            font-size: 12px;
+        }
+    }
 }
 
 .content p {
@@ -137,4 +146,13 @@ p.response-text {
 .top-bar .page-link .page-link-text{
     display: inline-block;
     padding-bottom: 3px;
+}
+
+.faq {
+    >div {
+        margin-top: 2rem;
+    }
+    h6 {
+        font-family: unhackathon-font;
+    }
 }

@@ -26,12 +26,16 @@
 }
 
 .index-image {
-	width: 200px;
-	height: 200px;
 	float: left;
 	margin: 30px;
 }
 
 .clearboth {
 	clear: both;
+}
+
+body.index .schedule-table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 450px;
 }
