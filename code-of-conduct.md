@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Code of Conduct
+in_header: true
 ---
 # Code of Conduct
 Unhackathon and its organizers are committed to providing a welcoming and harassment-free environment for participants of all races, gender identities, sexual orientations, physical abilities, physical appearances, and beliefs.

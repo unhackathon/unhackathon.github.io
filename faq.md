@@ -1,5 +1,7 @@
 ---
 layout: default
+title: FAQ
+in_header: true	
 ---
 # Frequently Asked Questions
 

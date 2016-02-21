@@ -1,7 +1,7 @@
 #event-image {
 	height: 500px;
-	background-size: auto 100%;
-	background-image: url("/img/pic5.jpg");
+	background-size: cover;
+	background-image: url("/img/banner.jpg");
 	position: relative;
 }
 #event-image-content {
@@ -12,9 +12,14 @@
 	right: 0;
 	background: linear-gradient(rgba(255,0,0,0.0), white);
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 300px;
 
+	h1 {
+		font-size: 62px;
+	}
 	h1, h3 {
+		color: #333;
+		letter-spacing: 1px;
 		font-weight: bold;
 		font-family: unhackathon-font;
 	}

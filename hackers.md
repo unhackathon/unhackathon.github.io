@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Hackers
+in_header: true
 ---
 
 # Hackspiration: Great Open Data Sets!

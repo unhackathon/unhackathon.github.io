@@ -127,3 +127,14 @@ p.response-text {
 .top-bar .page-link {
     font-family: unhackathon-font;
 }
+
+.top-bar .page-link.active .page-link-text{
+    display: inline-block;
+    border-bottom: 3px solid;
+    padding-bottom: 0;
+}
+
+.top-bar .page-link .page-link-text{
+    display: inline-block;
+    padding-bottom: 3px;
+}

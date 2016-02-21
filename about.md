@@ -1,6 +1,8 @@
 ---
 layout: default
-title: A New Kind of Hackathon, September 5, NYC
+title: About
+hello: FAD
+in_header: true 
 ---
 
 # What is Unhackathon?

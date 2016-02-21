@@ -14,3 +14,5 @@ markdown: kramdown
 
 kramdown:
     input: GFM
+top_level_pages:
+  -About

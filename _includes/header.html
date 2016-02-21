@@ -6,17 +6,15 @@
           {% include hack.html %}
         </a>
       </li>
-      <li>
-        <a class="page-link" href="/springboard-projects/">Springboard</a>
-      </li>
-      <li>
-        <a class="page-link" href="/hackers/">Hackers</a>
-      </li>
-      <li>
-        <a class="page-link" href="/code-of-conduct/">Code of Conduct</a>
-      </li>
-      <li>
-        <a class="page-link" href="/faq/">FAQ</a>
+      {% for node in site.pages %}
+        {% if node.in_header %}
+          {% if page.url == node.url %}
+            <li class="active"><a class="page-link active" href="{{node.url}}"><span class="page-link-text">{{node.title}}</span></a></li>
+          {% else %}
+            <li><a class="page-link" href="{{node.url}}"><span class="page-link-text">{{node.title}}</span></a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
       </li>
     </ul>
   </div>
