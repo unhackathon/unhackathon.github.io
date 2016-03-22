@@ -5,7 +5,7 @@ title: A New Kind of Hackathon, September 5, NYC
 
 <img class="index-image" src="/img/index-pic.jpg">
 
-April’s Unhackathon will take place over two days! Saturday will be an afternoon of workshops, tech talks, meeting other hackers, and learning new skills you've always wanted to have. Many hackers will start Springboard Projects, laying the groundwork for epic hacks the next day. We will support you as you learn and experiment, getting ready to hit the ground running the next morning. Sunday will be a full day of hacking on projects, ending in demos and prizes.
+This fall’s Unhackathon will take place over two days! Saturday will be an afternoon of workshops, tech talks, meeting other hackers, and learning new skills you've always wanted to have. Many hackers will start Springboard Projects, laying the groundwork for epic hacks the next day. We will support you as you learn and experiment, getting ready to hit the ground running the next morning. Sunday will be a full day of hacking on projects, ending in demos and prizes.
 
 Unhackathon welcomes hackers of all backgrounds and experience levels. Students in college and high school are eligible to be Unhackathon hackers. If you're a middle school student and would like to attend, you are welcome as long as you bring a parent with you! Please see our Welcome Statement for more information on our dedication to inclusivity, and our Springboard Projects for hackspiration! 
 
