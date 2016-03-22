@@ -12,31 +12,6 @@ Unhackathon welcomes hackers of all backgrounds and experience levels. Students 
 <br>
 <div class="clearboth"></div>
 
-## Schedule
-
-### Saturday
-
-|12pm |Checkin and lunch                        |
-|1pm  |Opening Ceremonies, Games and Activities |
-|2pm  |Workshops, Tech Talks, and hacking begin |
-|6pm  |Dinner                                   |
-|8pm  |Hacking ends for the night               |
-{:.schedule-table}
-
-### Sunday
-
-|10am |Checkin and breakfast    |
-|1pm  |Lunch                    |
-|6pm  |Dinner, hacking wraps up |
-|7pm  |Demos                    |
-|8pm  | Closing ceremonies      |
-{:.schedule-table}
-
-
-
-<!--<a class="typeform-share link" href="https://johnsdaniels.typeform.com/to/WsAkaT" data-mode="2" target="_blank">Sign up now</a>
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>-->
-
 <div class="row clearboth faq">
   <div class="large-4 columns">
     <h6>Should I work with a team?</h6>
