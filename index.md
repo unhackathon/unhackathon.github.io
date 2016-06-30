@@ -1,6 +1,6 @@
 ---
 layout: index
-title: A New Kind of Hackathon: October 15-16, NYC
+title: A New Kind of Hackathon&#58; October 15 &amp; 16, NYC
 ---
 
 <img class="index-image" src="/img/index-pic.jpg">
