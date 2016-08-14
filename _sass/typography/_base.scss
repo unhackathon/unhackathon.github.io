@@ -418,16 +418,6 @@ $abbr-underline: 1px dotted $black !default;
     border-bottom: $abbr-underline;
   }
 
-  // Code
-  code {
-    font-family: $code-font-family;
-    font-weight: $code-font-weight;
-    color: $code-color;
-    background-color: $code-background;
-    border: $code-border;
-    padding: $code-padding;
-  }
-
   // Keystrokes
   kbd {
     padding: $keystroke-padding;
