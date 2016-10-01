@@ -27,11 +27,11 @@ It originally started as a mobile OS, but has now expanded to:
 * Thousands of Unique devices supported
 * Written in Java
 * Amazing IDE
-* Play store is more lax.
-* Well documented
+* Play store is more lax
+* Well-documented
 
 ### Getting Started
-Development in android is done in Android Studio, a Google developed IDE that makes working on Android simple and fun! You should go ahead and snag the IDE [online](https://developer.android.com/sdk/index.html), or ask your local organizer for a preloaded thumb drive.
+Development for Android is done in Android Studio, a Google developed IDE that makes working on Android simple and fun! You should go ahead and snag the IDE [online](https://developer.android.com/sdk/index.html), or ask your local organizer for a preloaded thumb drive.
 
 ### Resources
 * [Android Developer Guides](https://developer.android.com/guide/index.html)
@@ -61,17 +61,20 @@ Development in android is done in Android Studio, a Google developed IDE that ma
 
 ### Lets start the tutorial
 
-So, today we’ll be making an app called clickzilla which introduces you to making a basic activity, layout and using intents and also using the options menu.
-Here’s the completed code for this project for reference
-https://github.com/adibalwani03/ClickZilla
+So, today we’ll be making an app called ClickZilla which introduces you to making a basic activity, layout, and using intents and also using the options menu.
+
+Here’s the completed code for this project for reference: [https://github.com/adibalwani03/ClickZilla](https://github.com/adibalwani03/ClickZilla)
 
 ### Create a New Project
 
-* Lets create a new Project
-* On the next screen you'll be prompted for the following
-    - Name
-    - Package Name
-    You can name these anything you want. I called the app ClickZilla and and the general convention for package name is com.&lt;yourhandle&gt;.&lt;appname&gt;
+First, let's create a new Project.
+
+Then on the next screen you'll be prompted for the following:
+
+* Name
+* Package Name
+
+You can name these anything you want. I called the app ClickZilla and and the general convention for package name is com.&lt;yourhandle&gt;.&lt;appname&gt;
 
 
 ![New Project](img/startproject.PNG)
@@ -81,47 +84,52 @@ https://github.com/adibalwani03/ClickZilla
 You can support as many systems as you want.
 I tend to prefer supporting anything Android 4.0 or above.
 
-Android 2.3 is now dead, so no need to support that and android 3.0 is just plain weird so I like to pretend that never happened.
+Android 2.3 is now dead, so no need to support that and Android 3.0 is just plain weird so I like to pretend that never happened.
 
-You can also add support for Google glass, TV and Wear if you want.
+You can also add support for Google Glass, TV, and Wear if you want.
 ![Android Support](img/choosesdk.png)
 
 ### Activity Templates
 
-And now you’ll be taken to the templates screen which contain prebuild activities you can use. For this one, we will be sticking to a blank activity (or a blank with fragment) but you can choose anything you want (Except Login activity and preference acitivity, those are for specific purposes)
+And now you’ll be taken to the templates screen which contain prebuilt activities you can use. For this one, we will be sticking to a blank activity (or a blank with fragment) but you can choose anything you want (except Login Activity and Preference Activity; those are for specific purposes).
 
 ![Choose Activity Type](img/chooseactivity.png)
 
 ### Activity Name
 
 Now we give the activity a name.
-Again, usual convention is that the first activity the app is called MainActivity
-Or, if the app requires login then you can start at loginActivity or a DispatchActivity (which checks for already logged in users)
-But these are just conventions so you don’t have to strictly follow them
+
+Usual convention is that the first activity the app is called MainActivity.
+
+Or, if the app requires login then you can start at LoginActivity or a DispatchActivity (which checks for already logged in users). But these are just conventions so you don’t have to strictly follow them.
 
 ![Name Activity](img/nameactivity.png)
 
 ### And now we wait
 
-For a million years for gradle to get ready
+For a million years while Gradle gets ready.
 
 ![Building](img/building.png)
 
 Meanwhile...
 
-### What is gradle?
+### What is Gradle?
 
 Gradle is the build system that Android Studio uses to build all apps.
+
 It is essentially a build automation system.
-In your build.gradle file you can declare dependencies, signing configurations for APK signatures, flavors of the app (Such as specific builds for different versions of Android, or debug and release flavors)
+
+In your build.gradle file you can declare dependencies, signing configurations for APK signatures, and flavors of the app (such as specific builds for different versions of Android, or debug and release flavors).
+
 Most of the time you will not need to make changes to build.gradle since Android Studio automates most of it (Automation for an Automation system, Yo Dawg!), but it is useful tool know to make certain things faster.
+
 For example, if you define a signing config for your release version in gradle, all you need to do is run “$gradlew.bat assembleRelease” and it will generate a complete signed APK.
 
 ### Congratulations!!
 
 You have completed your HelloWorld app.
 
-Over the next few slides I’ll go over the automatically generated code and then  we’ll start making changes
+Over the next few slides I’ll go over the automatically generated code and then we’ll start making changes.
 
 ![Hello World](img/helloworld.png)
 {:class='wide'}
@@ -138,7 +146,7 @@ The Manifests directory is where you declare your AndroidManifest.xml and any ot
 ![Manifests](img/manifests.png)
 The purpose of the manifest is to specify things for the device including declarations of all activities, all permissions required (eg. Internet, Wifi, I/O), special hardware requirements (camera, flash, gyro etc) and certain google APIs (eg. maps) and other things that can possibly affect compatibility.
 
-NOTE : Some of the tasks a manifest does is now also being done by the build.gradle such as declaring minimum android version
+NOTE : Some of the tasks a manifest does is now also being done by the build.gradle such as declaring minimum Android version
 
 #### Java Packages
 
@@ -271,7 +279,7 @@ public void buttonClicked(View v) {
 }
 {% endhighlight %}
 
-Whats new is the argument View v. Anything in your android application is a View. TextView, Buttons, Radios all are children of View. So in this case, the argument is just a reference to which button was clicked. But we don’t need that for now.
+Whats new is the argument View v. Anything in your Android application is a View. TextView, Buttons, Radios all are children of View. So in this case, the argument is just a reference to which button was clicked. But we don’t need that for now.
 Toast.makeText is the method used to make Toasts. It takes in three arguments, the first one specifies where the toast is displayed, which in this case is the application context. The second is the message to be displayed and the third is the length. Finally, you need to call .show() to actually display the toast but luckily Android studio is nice enough to warn you if you ever forget :)
 
 Fun Fact : Toasts are called toasts because originally they would pop in from the bottom like a toast coming out of toaster!
@@ -284,7 +292,7 @@ There are 2 easy ways of doing this!
 
 #### Method 1 : Android Debug Bridge
 
-Android Debug Bridge aka ADB is a tool used to debug android applications (Surprise Surprise!). Of course you need an Android Device to do this.
+Android Debug Bridge aka ADB is a tool used to debug Android applications (Surprise Surprise!). Of course you need an Android Device to do this.
 To get started, you need to have the Google Drivers which you can install from the SDK Manager.
 After that simply enable USB Debugging in your phone’s Developer options and connect it using USB and you’ll see a screen like this when you run the app.
 
@@ -295,7 +303,7 @@ After that simply enable USB Debugging in your phone’s Developer options and c
 If you don’t have an Android Device, fear not! Android Studio comes to the rescue!
 Android Studio comes with an Android Virtual Device (AVD) (Assuming you chose to install on during the installation). All you need is to chose Launch Emulator from the window displayed on the previous slide and your emulator would be ready in a few minutes.
 If you chose not to install an AVD, you can create one right now using the AVD Manager though you may need to download the system images using the SDK Manager.
-However, these virtual devices are usually slow, so you should only go for this method if you don’t have a compatible android device.
+However, these virtual devices are usually slow, so you should only go for this method if you don’t have a compatible Android device.
 If you have performance issues with the AVD, try lowering some of its specs using the AVD Manager.
 
 ### YAY WE MADE SOMETHING
