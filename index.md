@@ -1,13 +1,17 @@
 ---
 layout: index
-title: A New Kind of Hackathon&#58; October 15 &amp; 16, NYC
+title: A New Kind of Hackathon&#58; NYC
 ---
 
 <img class="index-image" src="/img/index-pic.jpg">
 
-This fall’s Unhackathon will take place over two days! Saturday will be an afternoon of workshops, tech talks, meeting other hackers, and learning new skills you've always wanted to have. Many hackers will start Springboard Projects, laying the groundwork for epic hacks the next day. We will support you as you learn and experiment, getting ready to hit the ground running the next morning. Sunday will be a full day of hacking on projects, ending in demos and prizes.
+<span>**We're very sad to announce that due to a last-minute venue unavailability, our next two-day event will be postponed to Spring 2017.**</span> As always, thank you to everyone for your enthusiasm for Unhackathon - we're sorry we'll have to wait until the spring to see you all together! This fall, our team will instead be busy developing new [Springboard Projects](/springboard-projects/) and volunteering at hackathons around the Northeast. If you are organizing a hackathon or technology learning event (no matter how small) for students from elementary school on up, we'd love to help through workshops, springboard projects, mentorship, and more. [Contact us](mailto:team@unhackathon.org) any time! 
 
-Unhackathon welcomes hackers of all backgrounds and experience levels. Students in college and high school are eligible to be Unhackathon hackers. If you're a middle school student and would like to attend, you are welcome as long as you bring a parent with you! Please see our Welcome Statement for more information on our dedication to inclusivity, and our Springboard Projects for hackspiration! 
+Our next Unhackathon will take place over two days! Saturday will be an afternoon of workshops, tech talks, meeting other hackers, and learning new skills you’ve always wanted to have. Many hackers will start Springboard Projects, laying the groundwork for epic hacks the next day. We will support you as you learn and experiment, getting ready to hit the ground running the next morning. Sunday will be a full day of hacking on projects, ending in demos and prizes.
+
+<img class="index-image right" width="400px" src="/img/index-pic2.jpg">
+
+Unhackathon welcomes hackers of all backgrounds and experience levels. Students in college and high school are eligible to be Unhackathon hackers. If you’re a middle school student and would like to attend, you are welcome as long as you bring a parent with you! Please see our Welcome Statement for more information on our dedication to inclusivity, and our Springboard Projects for hackspiration! 
 
 <br>
 <div class="clearboth"></div>
