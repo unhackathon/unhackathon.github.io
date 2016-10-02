@@ -1,137 +1,155 @@
 ---
 layout: springboard
-title: Chrome Extension
+title: Browser Extensions
+published: true
 ---
 
-# Springboard Project: Chrome Extension
 
-Not everyone is satisfied with functionality in browsers nowadays. In order to
-acquire that functionality, people often turn to browser extensions that
-functionality in order to accomplish the tasks needed.
+# Springboard Project: Browser Extensions
 
-Browser extensions aren’t new things - they’ve existed since the late 90s with
-Mozilla, and have gradually expanded to include all modern browsers today. But
-they used to be undocumented pieces of voodoo - connecting intricately to
-internals of a web browser that were more often than not constantly changing.
-Nowadays, they are fully documented and often require little more than basic
-knowledge of HTML and Javascript (even Firefox!).
+Web browsers are our portal to the internet - we can use them to communicate with each other, search for material we want, shop for products, and so much more. But web browsers aren't perfect. That's where browser extensions come in.
 
-This guide will set you up with a basic Chrome extension that mimics the
-functionality of the infamous _Cloud-To-Butt_ plugin. In essence, this extension
-sits in the background, and whenever it encounters a certain word, it replaces
-it with another. We’ll take you through the steps to set up the extension
-directory, create the javascript needed to replace “cloud” with “butt”, and then
-challenge you later to extend it later with an options menu to enable and
-disable the extension.
+Browser Extensions are pieces of code that allow you to augment your browser with newer features to enhance your web browsing experience. Some common ones in use today include µBlock Origin, Reddit Enhancement Suite, and OneTab.
 
-For reference, you should keep a browser open to the
-[Chrome Developer Centre](https://developer.chrome.com/extensions).
-It's a good reference to go to should you have any questions on what does what.
+Extensions, as a concept, began in the late 90s with the Netscape browser, the predecessor to many internet browsers out there. For users to add in much requested functionality, they created the Netscape Plugin Application Programming Interface (NPAPI), which allowed developers to create plugins to augment the web browsing experience. This allowed technologies such as Adobe Flash Player and Java Web Start to take off.
 
-**Challenge**: Try this on Firefox! Firefox also offers a powerful extension
-system, which not only supports HTML and Javascript, but also the core parts of
-their browser, including the UI. In addition, they are planning to support the
-Chrome extension API.
+Over time, other browsers began creating their own functionality for integrating into the browser, such as ActiveX for Internet Explorer. Today, NPAPI still exists, but alongside PPAPI (Pepper Plugin Application Programming Interface), Chrome Extensions/WebExtensions, and Safari Extensions.
 
-## Setting Up
-The best place to start is to actually create the extension itself so we can
-work with it. There are a lot of good boilerplate generators, or you can create
-one yourself by following the directions in Chrome’s documentation. The one this
-guide is going to use is [Extensionizr](http://extensionizr.com),
-a boilerplate generator.
+So what does this guide aim to do? The future of extensions, in the author's opinion, are Chrome Extensions (or, as Mozilla terms, "WebExtensions" -- we'll refer to them as just _Extensions_ here on in), so we'll cover that extension format here, which will work on both Chrome, Firefox, and Microsoft Edge. Safari uses their own extension format (though [they indicate that it is simple to port Chrome extensions to](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/SafariExtensionsConversionGuide/Chapters/Chrome.html#//apple_ref/doc/uid/TP40009993-CH2-SW1)).
 
-Start by opening your browser and navigating to `extensionizr.com`. This
-site provides a lot of controls, and we won’t go through it in too much detail,
-but most options have a help menu attached to them so you can read about it
-further.
+We'll introduce you to the format of the Extensions, walk you through a simple text replacer extension, and finally leave you with resources for you to expand on.
 
-For our extension, select the following:
+# Extensions Format
 
-* Extension type: Browser action
-* Background page: No background
-* Options page: No options page
-* Override: No Override
-* Content scripts: Inject js
-* Misc addons: Select none.
-* URL permissions: `*://*/\*` (we want all permissions)
-* Permissions: Shouldn’t need any, so deselect “Bookmarks” and anything checked.
+Extensions contain a relatively simple format. They contain your source files, and a `manifest.json`. Your source files are plain HTML/CSS/JS, while your `manifest.json` lets the browser know how to call your source files based on user activity.
 
-Now download and extract the generated ZIP file. Chrome seems to think that it's
-a dangerous ZIP sometimes, but it's not - we promise! If you're having trouble
-downloading the ZIP, you can use our pre-made one
-[here](/springboard-projects/chrome-extension/extension.zip).
+## manifest.json
 
-Let’s see our pre-made extension skeleton! To do so, click options, then
-`More tools` and `Extensions`. Enable `Developer mode` at the top of the
-extensions page if you haven’t done so already, then click
-`Load unpacked extension`. Navigate to the `ext` directory you unpacked earlier
-and select it. This should load a new extension,
-__CHANGE THIS : Extension boilerplate__. Congrats! You now have a working
-extension. But it doesn’t do anything yet!
+Extensions contain vital pieces of metadata so that we know where to start. For example, what do you want to do? What's the name of the extension going to be?
 
-## Changing "cloud" to "butt"
-We need to modify this extension to fit our needs. To do this, it is useful to
-have a text editor that supports you every step of the way. Sublime Text
-(http://www.sublimetext.com, free evaluation) and Atom (https://atom.io, free)
-are two of the most popular text editors that can help you get started. Choose
-one and download it, then open it up and navigate to the folder that you
-extracted from the ZIP file.
-
-First off, you’ll notice that if you navigate to Google and
-open the console, you’ll see the words
-`Hello. This message was sent from scripts/inject.js` when it finishes loading.
-This exists in “scripts/inject.js”, and proves to us that Chrome is injecting
-this javascript into every webpage we visit. Neat, huh? (We'll add other
-websites next.)
-
-Every page you visit is called a “document”. The document represents the page
-that you see whenever you load the page itself - the buttons, links, alignment,
-images, and more. Documents consist of “nodes”, which represent these buttons,
-links, alignment, images, etc - “elements” of the page.
-
-Since our extension is going to replace “cloud” with “butt” in all the text on
-the page, we should act accordingly:
-
-**So what's the goal of this extension?** The goal of our plugin is to visit all
-the nodes of the document, and when we encounter a text node, replace all
-occurrences of "cloud" with "butt".
-
-### So let’s do it!
-
-**Challenge**: Stop here and try to do it on your own. Your way might be
-different than the one used in this guide, but the goal here is to get it
-working! No one solution is correct, and there might be more efficient ways than
-others.
-
-First, remember how I said that we have to add other websites? That's because
-right now, we're only watching Google.com. We need to fix that. In our
-`manifest.json` file, change:
+We want to declare what the extension does so that our users know what functionality they're adding. This is declared in a `manifest.json` in your extension root directory. For example, here is one from the [MDN (CC-BY-SA 2.5)](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_first_WebExtension):
 
 ```json
+{
+  "manifest_version": 2,
+  
+  "name": "Borderify",
+  "version": "1.0",
+  "description": "Adds a solid red border to all webpages matching mozilla.org.",
+  "homepage_url": "http://www.mozilla.org/",
 
-"matches": [
-  "https://www.google.com/*"
-],
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Borderify",
+  },
+  
+  "permissions": [
+  	"*://*.mozilla.org/*"
+  ],
 
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["borderify.js"]
+    }
+  ]
+
+}
 ```
 
-to all sites:
+A brief overview of the properties:
+
+* __manifest_version__: Defines what format the `manifest.json` is. Should be __2__.
+* __name__: The name of your extension.
+* __version__: The version of your extension.
+* __description__: A description of your extension. What does it do?
+* __homepage_url__: Does your extension have a homepage?
+* __icons__: A map of pixel size to image file of the icon for your extension.
+* __browser_action__: This places a button of your extension on the taskbar of the browser. When the user clicks it, it activates a popup associated with your extension. This is most commonly useful for configuring user settings, allowing easy enable/disable of your extension, and feedback.
+* __permissions__: Chrome requires that you declare what you do with the browser. From using the microphone or webcam to modifying page content, you must declare that in permissions.
+* __content_scripts__: Content scripts allow you to execute scripts based on sites that the user visits. For example, the above extension would attempt to place a red border on the page whenever the user visits content from mozilla.org (given the implementation defined in `borderify.js`.
+
+The directory structure can be fluid and based on however you like; however, the `manifest.json` is required and must be in the root directory for your extension.
+
+You can read more about `manifest.json` on the [MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json), the [Chrome Developer Portal](https://developer.chrome.com/extensions/manifest), and the [Microsoft Developer Portal](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/api-support/supported-manifest-keys/).
+
+## .xpi, .crx, etc.
+
+When you have an extension that is ready for distribution, you can package it in a `.xpi` for Firefox and a `.crx` for Chrome. For now, we will work in debugging environments, which means we want to skip the packaging process.
+
+* If you use Firefox, you can enable debugging mode [here](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox).
+* If you use Chrome, follow the directions [here](https://developer.chrome.com/webstore/get_started_simple#step4) as needed.
+* If you use Microsoft Edge, follow the directions [here](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/guides/adding-and-removing-extensions/) as needed.
+
+When it comes time to package for real, you must zip up your extension files and submit them to [addons.mozilla.org](https://addons.mozilla.org/) and [chrome.google.com](https://developer.chrome.com/webstore/get_started_simple#step5). They will create the `.xpi` and `.crx` automatically. Please note that fees may apply, and they are not covered in this tutorial.
+
+Microsoft Edge will allow extensions to be installed through the Windows Store; this feature is not available at the time of writing (1 October 2016).
+
+# Text Replacement
+
+Let's walk through the steps needed to create a text replacement extension.
+
+## Create the initial directory structure
+
+Create a directory wherever you'd like. Let's name it `textreplace-extension`. You can rename it whatever, but we'll refer to this as the _root directory_ from here on in.
+
+## Create the manifest.json
+
+In the root directory, create a manifest.json:
 
 ```json
+{
+  "manifest_version": 2,
+  
+  "name": "Text Replacement",
+  "version": "1.0",
+  "description": "Replaces text on the page with other substitute text.",
+  "homepage_url": "http://www.unhackathon.org/",
 
-"matches": [
-  "*://*/*"
-],
+  "icons": {
+    "48": "icon.png"
+  },
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Text Replacement",
+  },
+  
+  "permissions": [
+  	"*://*/*"
+  ],
 
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["replace.js"]
+    }
+  ]
+
+}
 ```
 
-In our `scripts/inject.js` file, we’re provided with a skeleton of a javascript
-file that runs when the page has completed loading. We can use this to then
-modify all the occurrences of `cloud` with `butt`.
+From here, we can see that we're creating an extension:
 
-Here's what our `inject.js` looks like. Yours might be different:
+* with the icon `icon.png`
+* that creates a button on the Browser Toolbar with the icon `icon.png` and the title `Text Replacement`, and does nothing when clicked.
+* with permissions on all websites
+* that executes `replace.js` on every site navigated to.
 
-{% highlight js %}
+## Add an icon
+
+We don't have `icon.png`, so let's download a sample one (courtesy of MDN). Save [this icon file](https://github.com/mdn/webextensions-examples/raw/master/borderify/icons/border-48.png) as `icon.png` in the root directory.
+
+## Create our content script
+
+We want `replace.js` to run on every website and substitute text, so let's create reject.js. Here, I'm replacing all instances of `force` with `horse` (inspired by [xkcd](http://xkcd.com/1418/)) -- feel free to substitute that with some other variations (like the ones listed on [another xkcd comic](http://xkcd.com/1288/)).
+
+```js
 chrome.extension.sendMessage({}, function(response) {
     var readyStateCheckInterval = setInterval(function() {
     if (document.readyState === "complete") {
@@ -165,30 +183,34 @@ chrome.extension.sendMessage({}, function(response) {
 
         textNodes.forEach(function(currentVal, index, array) {
             // replace all case-insensitive occurences of 'cloud' with 'butt'.
-            currentVal.nodeValue = currentVal.nodeValue.replace(/cloud/gi, "butt");
+            currentVal.nodeValue = currentVal.nodeValue.replace(/force/gi, "horse");
         });
 
     }
     }, 10);
 });
-{% endhighlight %}
+```
 
-Reload your extension, navigate to a page that has `cloud`, and _voila_! It's
-done!
+## Load your extension
 
-## Going Further
-Now that you have a working extension, it's time to customise it to your
-liking! These are all challenges that you can do, and we will leave it to you
-to figure them out. Some of them are obvious, some of them aren't, but we have
-faith that guys can do it!
+Let's test this extension. As above:
 
-**Challenge**: Modify the name, description, and author of your extension.
+* If you're using Firefox, load or reload the extension [as demonstrated on MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox).
+* If you're using Chrome, load or reload the extension [as documented](https://developer.chrome.com/webstore/get_started_simple#step4).
+* If you're using Microsoft Edge, load or reload the extension [as documented](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/guides/adding-and-removing-extensions/).
 
-**Challenge**: Make a creative picture for your extension!
+If all is successful, the following line should say nothing but horse:
 
-**Challenge**: Find different ways for your extension to run. How else can your
-extension run?
+force force horse force horse force force force force force force
 
-**Challenge**: Make an options menu to enable and disable the extension.
+# Going Further
 
-**Challenge**: Expand the extension to add more word to word options.
+This is only a brief overview of Extensions and how powerful they are. You now have a working extension that does text substitution; there are ways to expand it to do options menus, modify the CSS of a page, block text, and more.
+
+We would like to point you towards the following resources for more information:
+
+* [MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)
+* [Chrome](https://developer.chrome.com/extensions)
+* [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)
+* [Safari](https://developer.apple.com/safari/extensions/)
+
