@@ -2,6 +2,8 @@
 layout: springboard
 title: Write You a Web Crawler
 ---
+**Note:** This tutorial uses the Unhackathon website (http://unhackathon.org/) as our example starting point for web crawling. Please be aware that some of the sample outputs may be a bit different, since the Unhackathon website is updated occasionally. 
+
 # Write You a Web Crawler
 
 This springboard project will have you build a simple web crawler in Python using the Requests library. Once you have implemented a basic web crawler and understand how it works, you will have numerous opportunities to expand your crawler to solve interesting problems.
