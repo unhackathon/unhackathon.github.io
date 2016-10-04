@@ -123,7 +123,7 @@ def crawl_web(initial_url):
         current_url = to_crawl.pop(0)
         r = requests.get(current_url)
         crawled.append(current_url)
-        for url in `re.findall('<a href="([^"]+)">', str(r.content)):
+        for url in re.findall('<a href="([^"]+)">', str(r.content)):
             if url[0] == '/':
                 url = current_url + url
             pattern = re.compile('https?')
