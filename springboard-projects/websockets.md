@@ -127,7 +127,7 @@ Now when you run main.go, and hit localhost:8080, you should see a red "Hello, W
 
 ### Javascript drawer
 
-As our next step, we need the actual 'drawing' part of our application. We will be using a javascript "canvas" element to custom drawing. Canvases come in two flavors, 2D and 3D, but since we're just creating a drawing App, we will stick to the 2D version for now. F
+As our next step, we need the actual 'drawing' part of our application. We will be using a javascript "canvas" element to custom drawing. Canvases come in two flavors, 2D and 3D, but since we're just creating a drawing App, we will stick to the 2D version for now.
 
 For the HTML, we just need to have a plain 'canvas' element on a blank page.
 {% highlight html %}
