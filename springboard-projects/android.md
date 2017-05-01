@@ -12,15 +12,25 @@ It originally started as a mobile OS, but has now expanded to:
 
 #### Android TV
 
+<a href="img/androidtv.jpg" data-lightbox="Android TV" data-title="Android TV">
 ![Android TV](img/androidtv.jpg)
+</a>
 
 #### Android Wear
 
+<a href="img/androidwear.jpg" data-lightbox="Android TV" data-title="Android TV">
+<a href="img/androidwear.jpg" data-lightbox="Android TV" data-title="Android TV">
 ![Android TV](img/androidwear.jpg)
+</a>
+</a>
 
 #### Android Auto
 
+<a href="img/androidauto.jpg" data-lightbox="Android TV" data-title="Android TV">
+<a href="img/androidauto.jpg" data-lightbox="Android TV" data-title="Android TV">
 ![Android TV](img/androidauto.jpg)
+</a>
+</a>
 
 ### Why Android?
 
@@ -42,7 +52,9 @@ Development in android is done in Android Studio, a Google developed IDE that ma
 
 ### Basic Structure of an App
 
+<a href="img/activitylayout.png" data-lightbox="Activity Structure" data-title="Activity Structure">
 ![Activity Structure](img/activitylayout.png){:class='short'}
+</a>
 
 
 ### What do these words mean?
@@ -74,13 +86,17 @@ https://github.com/adibalwani03/ClickZilla
     You can name these anything you want. I called the app ClickZilla and and the general convention for package name is com.&lt;yourhandle&gt;.&lt;appname&gt;
 
 
+<a href="img/startproject.PNG" data-lightbox="New Project" data-title="New Project">
 ![New Project](img/startproject.PNG)
+</a>
 
 ### Name your application
 
 On this screen you will enter your application name and your company domain. If you dont have a website then you can pick any domain but it should be unique because 2 applications with the same package name cannot exist.
 
+<a href="img/applicationname.png" data-lightbox="Application Name" data-title="Application Name">
 ![Application Name](img/applicationname.png)
+</a>
 
 ### Support
 
@@ -90,13 +106,17 @@ I tend to prefer supporting anything Android 4.0 or above.
 Android 2.3 is now dead, so no need to support that and Android 3.0 is just plain weird so I like to pretend that never happened.
 
 You can also add support for Google glass, TV, Auto and Wear if you want.
+<a href="img/choosesdk.png" data-lightbox="Android Support" data-title="Android Support">
 ![Android Support](img/choosesdk.png)
+</a>
 
 ### Activity Templates
 
 And now you’ll be taken to the templates screen which contain prebuild activities you can use. For this one, we will be sticking to a basic activity but you can also pick blank activity which is just a basic activity without some of the boilerplate code. The other templates are for more specific situations but if any of them fit your app then you can choose that.
 
+<a href="img/chooseactivity.png" data-lightbox="Choose Activity Type" data-title="Choose Activity Type">
 ![Choose Activity Type](img/chooseactivity.png)
+</a>
 
 ### Activity Name
 
@@ -105,13 +125,17 @@ Again, usual convention is that the first activity the app is called MainActivit
 Or, if the app requires login then you can start at loginActivity or a DispatchActivity (which checks for already logged in users)
 But these are just conventions so you don’t have to strictly follow them
 
+<a href="img/nameactivity.png" data-lightbox="Name Activity" data-title="Name Activity">
 ![Name Activity](img/nameactivity.png)
+</a>
 
 ### And now we wait
 
 For a million years for gradle to get ready
 
+<a href="img/building.png" data-lightbox="Building" data-title="Building">
 ![Building](img/building.png)
+</a>
 
 Meanwhile...
 
@@ -129,7 +153,9 @@ You have completed your HelloWorld app.
 
 Over the next few slides I’ll go over the automatically generated code and then  we’ll start making changes
 
+<a href="img/helloworld.png" data-lightbox="Hello World" data-title="Hello World">
 ![Hello World](img/helloworld.png)
+</a>
 {:class='wide'}
 
 
@@ -137,13 +163,17 @@ Over the next few slides I’ll go over the automatically generated code and the
 
 Here you can see the basic file structure of your app. Each folder here has a specific purpose which the following slides will explain.
 
+<a href="img/filestructure.png" data-lightbox="File Structure" data-title="File Structure">
 ![File Structure](img/filestructure.png)
+</a>
 
 #### Manifests
 
 The Manifests directory is where you declare your AndroidManifest.xml and any other manifests.
 
+<a href="img/manifests.png" data-lightbox="Manifests" data-title="Manifests">
 ![Manifests](img/manifests.png)
+</a>
 
 The purpose of the manifest is to specify things for the device including declarations of all activities, all permissions required (eg. Internet, Wifi, I/O), special hardware requirements (camera, flash, gyro etc) and certain google APIs (eg. maps) and other things that can possibly affect compatibility.
 
@@ -156,13 +186,17 @@ Most of your code would go in the main package.
 
 I personally have never used the AndroidTest package, so I can’t say much on that, but i’m guessing its for making test cases for the app (If someone knows, do tell me and will update the project).
 
+<a href="img/javafolders.png" data-lightbox="Java" data-title="Java">
 ![Java](img/javafolders.png)
+</a>
 
 #### Res
 
 The res folder is the real deal. This folder contains all the graphics+ui stuff of your app.
 
+<a href="img/resourcefolder.png" data-lightbox="Resources" data-title="Resources">
 ![Resources](img/resourcefolder.png)
+</a>
 
 * Drawable
    This is where all images go. Real programmers create different sized of every image to reduce memory imprint on smaller devices, but i’m too lazy for that
@@ -180,7 +214,9 @@ This is where all the gradle files reside.
 Usually you’ll only be making small changes to the build.gradle in the App Module
 Other than that, its mostly left untouched
 
+<a href="img/gradlefolder.png" data-lightbox="Gradle" data-title="Gradle">
 ![Gradle](img/gradlefolder.png)
+</a>
 
 ### Layouts
 
@@ -197,7 +233,9 @@ Going through it line by line we have :
     - This is the xml version and encoding of the file.
 * &lt;CoordinatorLayout
     - This is the declaration of the layout, which in this case is the Coordinator Layout. As the name suggests, this type of layout is to coordinate the movement of various views inside and moving the views in relation to each other. For example, you can make the toolbar shorter as you scroll down etc.
-     <!-- ![Coordinator](http://androcode.es/wp-content/uploads/2015/10/simple_coordinator.gif) -->
+     <!-- <a href="http://androcode.es/wp-content/uploads/2015/10/simple_coordinator.gif" data-lightbox="Coordinator" data-title="Coordinator">
+![Coordinator](http://androcode.es/wp-content/uploads/2015/10/simple_coordinator.gif) -->
+</a>
 * &lt;AppBarLayout
     - This is the declration of the app bar of your app. The app bar contains the toolbar and anything else you want to keep inside it.
 * &lt;include
@@ -283,7 +321,9 @@ And finally onClick is the magical part of Button. Clicking on this button will 
 
 At the end, if you go to your Design tab, your layout preview should look something like this
 
+<a href="img/initiallayout.png" data-lightbox="Layout Preview" data-title="Layout Preview">
 ![Layout Preview](img/initiallayout.png)
+</a>
 
 ### Making the Button Do Work
 
@@ -322,7 +362,9 @@ Android Debug Bridge aka ADB is a tool used to debug android applications (Surpr
 To get started, you need to have the Google Drivers which you can install from the SDK Manager.
 After that simply enable USB Debugging in your phone’s Developer options and connect it using USB and you’ll see a screen like this when you run the app.
 
+<a href="img/chooseRunningDevice.png" data-lightbox="Choosing device" data-title="Choosing device">
 ![Choosing device](img/chooseRunningDevice.png)
+</a>
 
 #### Method 2 : Android Emulator
 
@@ -334,7 +376,9 @@ If you have performance issues with the AVD, try lowering some of its specs usin
 
 ### YAY WE MADE SOMETHING
 
+<a href="img/screenshot.png" data-lightbox="Screenshot" data-title="Screenshot">
 ![Screenshot](img/screenshot.png){:class='short'}
+</a>
 
 
 Now lets make more!
@@ -349,15 +393,21 @@ Now that we have an activity to increment the counter, lets add another one to d
 So go into the porject explorer and right click anywhere and choose New > Activity > Blank Activity
 Name the activity as DecrememntActivity and hit finish.
 
+<a href="img/addNewActivity.png" data-lightbox="Add New Activity" data-title="Add New Activity">
 ![Add New Activity](img/addNewActivity.png)
+</a>
 
 ### Time to use what you've learned
 
 Modify the MainActivity to have another button which calls launchDecrementActivity() and modify the DecrementActivity to have a button which also calls buttonClicked(). This is what the final activities should look like:
 
+<a href="img/mainActivityDecrementButton.png" data-lightbox="Main Activity" data-title="Main Activity">
 ![Main Activity](img/mainActivityDecrementButton.png)
+</a>
 
+<a href="img/DecrementActivity.png" data-lightbox="Dispatch Activity" data-title="Dispatch Activity">
 ![Dispatch Activity](img/DecrementActivity.png)
+</a>
 
 ### How to launch this new Activity
 
